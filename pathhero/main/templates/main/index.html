@@ -3,6 +3,11 @@
 {% block content %}
     <h1 id="title">Path Hero</h1>
 
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Find My Path</button>
+    </form>
+
     <div id="map"></div>
     <script>
         var map;
