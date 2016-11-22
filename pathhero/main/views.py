@@ -12,8 +12,9 @@ def index(request):
 	if request.method == 'POST':
 		form = LocationInputForm(request.POST)
 		if form.is_valid():
-			origin = form.cleaned_data['origin']
-			destination = form.cleaned_data['destination']
+			origin = form.cleaned_data['start']
+			destination = form.cleaned_data['end']
+			print origin, destination
 			payload = {
 				'MAPS_KEY': MAPS_KEY,
 				'form': form,
