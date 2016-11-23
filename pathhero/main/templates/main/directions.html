@@ -5,7 +5,7 @@
     <h1 id="title">Path Hero</h1>
 
     <p>Directions from {{ origin }} to {{ destination }}</p>
-    <p>Stops: </p> <!-- TODO: keep waypoints in order -->
+    <p>Stops: </p>
     {% for i in midpoints %}
         <p>{{ i.0 }}</p>
     {% endfor %}
@@ -48,7 +48,6 @@
             origin: new google.maps.LatLng({{ origin.lat }}, {{ origin.lng }}),
             destination: new google.maps.LatLng({{ destination.lat }}, {{ destination.lng }}),
             waypoints: mids,
-            optimizeWaypoints: true,
             travelMode: 'WALKING'
         }, function (response, status) {
             if (status === 'OK') {
