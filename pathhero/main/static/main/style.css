@@ -1,4 +1,8 @@
 
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
 /* Important Map CSS */
 
 #map {
@@ -32,9 +36,10 @@ form {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: .5em;
+    text-align: center;
 }
 
-.post-form ul {
+.post-form ul, .post-form label {
     text-align: center;
     vertical-align: middle;
 }
@@ -47,5 +52,12 @@ form {
 
 .post-form button {
     margin: .25em;
+    display: inline-block;
+}
+
+.add-row a {
+    padding: .25em;
+    border-radius: 1em;
+    border-color: gray;
     display: inline-block;
 }
