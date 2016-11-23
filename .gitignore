@@ -3,3 +3,6 @@
 db.sqlite3
 config.json
 .DS_Store
+fixtures
+buildings.json
+createfixture.py
