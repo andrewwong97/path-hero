@@ -7,19 +7,19 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_ul }}
-        <br>
         {% for mid_form in mid_formset %}
-            <label>Mid:</label><li class="mid-input">{{ mid_form.mid }}</li>
+            <label>Stops:</label><br><li class="mid-input">{{ mid_form.mid }}</li>
             <br>
         {% endfor %}
-        <br>
         {{ mid_formset.management_form }}
         <button type="submit" class="save btn btn-default">Find My Path</button>
     </form>
 
     <script>
-        $('.mid-input').formset();
-        /* TODO: overwrite add and remove styling */
+        $('.mid-input').formset({
+            addText: 'Add Stop',
+            deleteText: 'Remove'
+        });
     </script>
 
     <div id="map"></div>

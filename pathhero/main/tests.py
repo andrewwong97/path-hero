@@ -3,7 +3,7 @@ from .models import Building
 
 
 class BuildingsTest(TestCase):
-
+	# Note: all tests must start with "test"
 	def setUp(self):
 		Building.objects.create(name='AMR 1', lat=1.0, lng=1.0)
 		self.b = Building.objects.get(name='AMR 1')

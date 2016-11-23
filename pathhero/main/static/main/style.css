@@ -55,9 +55,29 @@ form {
     display: inline-block;
 }
 
-.add-row a {
-    padding: .25em;
-    border-radius: 1em;
-    border-color: gray;
+.add-row, .delete-row {
+    font-weight: normal;
+    font-family: inherit;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #333333;
+    background-color: #ffffff;
+    transition: background-color 2ms ease-out, border-color 2ms ease-out;
     display: inline-block;
+    margin: .25em;
+}
+
+.add-row:hover, .delete-row:hover {
+    color: #000000;
+    background-color: #e6e6e6;
+    border-color: #adadad;
 }
