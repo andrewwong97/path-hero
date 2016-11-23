@@ -4,6 +4,6 @@ from .models import Building
 
 
 class LocationInputForm(forms.Form):
-	start = forms.ModelChoiceField(queryset=Building.objects.all(), label='Start')
-	mid = forms.ModelChoiceField(queryset=Building.objects.all(), label='Midpoint')
-	end = forms.ModelChoiceField(queryset=Building.objects.all(), label='End')
+	start = forms.ModelChoiceField(queryset=Building.objects.order_by('name'), label='Start')
+	mid = forms.ModelChoiceField(queryset=Building.objects.order_by('name'), label='Mid')
+	end = forms.ModelChoiceField(queryset=Building.objects.order_by('name'), label='End')
