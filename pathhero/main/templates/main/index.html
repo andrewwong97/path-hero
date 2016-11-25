@@ -2,18 +2,25 @@
 
 {% block content %}
 
-    <h1 id="title">Path Hero</h1>
+    <div class="col-md-12 col-xs-12">
+        <h4>Path Hero helps you find the fastest way through your classrooms at JHU. Get started by selecting your
+            origin
+            <br>and destination!</h4><br><br>
 
-    <form method="POST" class="post-form">
-        {% csrf_token %}
-        {{ form.as_ul }}
-        {% for mid_form in mid_formset %}
-            <label>Stops:</label><br><li class="mid-input">{{ mid_form.mid }}</li>
+        <form method="POST" class="post-form">
+            <h3 id="title">Path Finder</h3>
+            {% csrf_token %}
+            {{ form.as_ul }}
             <br>
-        {% endfor %}
-        {{ mid_formset.management_form }}
-        <button type="submit" class="save btn btn-default">Find My Path</button>
-    </form>
+            {% for mid_form in mid_formset %}
+                <li class="mid-input"><label>Stop:</label> {{ mid_form.mid }}</li>
+            {% endfor %}
+            {{ mid_formset.management_form }}
+            <button type="submit" class="save btn btn-default">Find My Path</button>
+        </form>
+    </div>
+
+
 
     <script>
         $('.mid-input').formset({
@@ -26,7 +33,10 @@
 
 {% endblock %}
 
+
 {% block maps_scripts %}
+    <!-- Hide index map for now -->
+    <!--
     <script>
         var map;
 
@@ -47,4 +57,5 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key={{ MAPS_KEY }}&callback=initMap"
             async defer></script>
+    -->
 {% endblock %}

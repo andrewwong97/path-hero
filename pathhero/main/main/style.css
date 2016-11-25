@@ -39,6 +39,12 @@ form {
     text-align: center;
 }
 
+.post-form {
+    padding: 2.75em;
+    border-radius: .5em;
+    background-color: #c5e4ff;
+}
+
 .post-form ul, .post-form label {
     text-align: center;
     vertical-align: middle;
@@ -72,7 +78,7 @@ form {
     color: #333333;
     background-color: #ffffff;
     transition: background-color 2ms ease-out, border-color 2ms ease-out;
-    display: block;
+    display: inline-block;
     margin: .25em;
 }
 
