@@ -1,0 +1,7 @@
+language: python
+python:
+  - "2.7"
+  - "3.5"
+install: "pip install -r pathhero/requirements.txt"
+# run tests
+script: cd pathhero && python manage.py test 
