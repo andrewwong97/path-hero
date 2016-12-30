@@ -1,4 +1,5 @@
-# Path Hero
+# Path Hero [![Build Status](https://travis-ci.org/andrewwong97/path-hero.svg?branch=master)](https://travis-ci.org/andrewwong97/path-hero)
+
 Path Hero helps you find the fastest and least painful way to navigate to your JHU classes.
 
 # Usage
